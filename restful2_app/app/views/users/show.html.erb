@@ -1,0 +1,24 @@
+<h1>I am a user</h1>
+
+<%=@user.fname %>
+<br>
+<i><%=@user.email %></i>
+<br>
+<br>
+
+<%=@user.posts.each do |post| %>
+<b>Title: <%=post.title %></b>
+<br>
+<br>
+	<%=post.body %>
+<br>
+<br>
+<% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<%=link_to "Delete User", user_path, method: :delete, confirm: "Are you sure?" %>
